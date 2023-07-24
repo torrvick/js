@@ -11,15 +11,17 @@ async function getUsers() {
 
 async function showUsers() {
     let jsonFromLS = JSON.parse(localStorage.getItem('users'));
-    let usersSection = document.getElementById('cardusers');
+    let usersSection = document.getElementById('userscard');
     let cardsHTML = ''; 
     jsonFromLS.forEach(element => {
         let card = `
         <div class="card">
-            ${element.name}
-            ${element.phone}
+            <b>${element.name}</b>
+            ${element.phone}<br>
+            ${element.email}
+            <hr>
         </div>`;
-        cardsHTML += card;
+        cardsHTML += card ;
     });
     usersSection.innerHTML = cardsHTML;
 }

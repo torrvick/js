@@ -20,10 +20,15 @@ H1 {
     margin-bottom: 30px;
 }
 
-/* .part2 {
-    display: none;
-} */
-.part2 .part2 {
+#userscard {
+    margin-top: 20px;
+}
+
+hr {
+    margin-right: 400px;
+}
+
+.part1 .part2 {
     display: block;
 }
 
