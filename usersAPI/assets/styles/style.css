@@ -1,0 +1,43 @@
+body {
+    display: block;
+    max-width: 900px;
+    margin: auto;
+    align-content: center;
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#jsonfix {
+    cursor: pointer;
+    color: blue;
+}
+
+H1 {
+    text-align: center;
+}
+
+.codecard {
+    margin-bottom: 30px;
+}
+
+/* .part2 {
+    display: none;
+} */
+.part2 .part2 {
+    display: block;
+}
+
+.button {
+    background-color: #2E9AFF;
+    min-inline-size: 210px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 9px 15px;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
