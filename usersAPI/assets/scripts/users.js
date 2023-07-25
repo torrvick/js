@@ -9,24 +9,6 @@ async function getUsers() {
     }
 }
 
-// async function showUsers() {
-//     let jsonFromLS = JSON.parse(localStorage.getItem('users'));
-//     let usersSection = document.getElementById('userscard');
-//     let cardsHTML = ''; 
-//     // console.log(jsonFromLS);
-//     jsonFromLS.forEach(element => {
-//         let card = `
-//         <div class="card">
-//             <b>${element.name}</b>
-//             ${element.phone}<br>
-//             ${element.email}
-//             <hr>
-//         </div>`;
-//         cardsHTML += card ;
-//     });
-//     usersSection.innerHTML = cardsHTML;
-// }
-
 async function showUsers() {
     let jsonFromLS = JSON.parse(localStorage.getItem('users'));
     let usersSection = document.getElementById('userscard');
