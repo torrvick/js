@@ -9,6 +9,24 @@ async function getUsers() {
     }
 }
 
+// async function showUsers() {
+//     let jsonFromLS = JSON.parse(localStorage.getItem('users'));
+//     let usersSection = document.getElementById('userscard');
+//     let cardsHTML = ''; 
+//     // console.log(jsonFromLS);
+//     jsonFromLS.forEach(element => {
+//         let card = `
+//         <div class="card">
+//             <b>${element.name}</b>
+//             ${element.phone}<br>
+//             ${element.email}
+//             <hr>
+//         </div>`;
+//         cardsHTML += card ;
+//     });
+//     usersSection.innerHTML = cardsHTML;
+// }
+
 async function showUsers() {
     let jsonFromLS = JSON.parse(localStorage.getItem('users'));
     let usersSection = document.getElementById('userscard');
@@ -65,17 +83,21 @@ async function addUser(event) {
             },
             body: JSON.stringify(sendString)
         });
-
+    if (response.status >= 200 && response.status <= 299) {
     let jsonFromLS = localStorage.getItem('users');
     jsonFromLS = JSON.parse(jsonFromLS);
     jsonFromLS.push(sendString);
     localStorage.setItem('users', JSON.stringify(jsonFromLS));
     showUsers();
-
+    } else {
+        alert("Произошла ошибка")
+        console.log(response);
+    }
     let inputs = userForm.getElementsByClassName('input');
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].value ='';
     }
+
 
 }
 
