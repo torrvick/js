@@ -75,6 +75,7 @@ async function addUser(event) {
         email: email,
         phone: phone
     }; 
+    
     let response = await fetch(url, 
         {
             method: 'POST',
@@ -83,16 +84,18 @@ async function addUser(event) {
             },
             body: JSON.stringify(sendString)
         });
+
     if (response.status >= 200 && response.status <= 299) {
-    let jsonFromLS = localStorage.getItem('users');
-    jsonFromLS = JSON.parse(jsonFromLS);
-    jsonFromLS.push(sendString);
-    localStorage.setItem('users', JSON.stringify(jsonFromLS));
-    showUsers();
+        let jsonFromLS = localStorage.getItem('users');
+        jsonFromLS = JSON.parse(jsonFromLS);
+        jsonFromLS.push(sendString);
+        localStorage.setItem('users', JSON.stringify(jsonFromLS));
+        showUsers();
     } else {
         alert("Произошла ошибка")
         console.log(response);
     }
+
     let inputs = userForm.getElementsByClassName('input');
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].value ='';
