@@ -20,27 +20,61 @@ H1 {
     margin-bottom: 30px;
 }
 
-#userscard {
+#userscard { 
     margin-top: 20px;
 }
 
-hr {
-    margin-right: 400px;
+#adduser {
+    padding-top: 10px;
+}
+
+.input {
+    margin-bottom: 5px;
+}
+
+table {
+    border-spacing: 0;
+}
+
+.username {
+    border-top: 20px;
+    width:180px;
+    vertical-align:top;
+    text-align:left;
+    border-bottom: 1px solid black;
+}
+
+.userinfo {
+    text-align: right;
+    border-bottom: 1px solid black;
 }
 
 .part1 .part2 {
     display: block;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction:column;
+    align-items:normal;
+}
+
 .button {
     background-color: #2E9AFF;
-    min-inline-size: 210px;
+    min-inline-size: 110px;
     border: 2px solid transparent;
     border-radius: 6px;
     padding: 9px 15px;
     font-size: 18px;
     font-family: inherit;
     cursor: pointer;
+}
+
+.input {
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
 }
 
 .hidden {

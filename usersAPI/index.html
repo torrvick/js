@@ -23,10 +23,20 @@
         </div>
         <button class="button" id="part2btn">Задание 2</button>
     </section>
-    <section class="part2" id="part2">
+    <section class="part2 hidden" id="part2">
         <h2>Задание 2</h2>
         <button class="button" id="getusers">Показать пользователей</button>
         <div id="userscard"></div>
+        <div id="adduser" class="wrapper hidden">
+                <form id="form">
+                    <input type="text" class="input" placeholder="Имя"><br>
+                    <input type="text" class="input" placeholder="Логин"><br>
+                    <input type="text" class="input" placeholder="Телефон"><br>
+                    <input type="text" class="input" placeholder="Email"><br>
+                    <input type="submit" class="button" value="Добавить">
+                </form>
+
+        </div>
     </section>
     <script src="./assets/scripts/genUI.js"></script>
     <script src="./assets/scripts/users.js"></script>

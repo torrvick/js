@@ -1,5 +1,5 @@
-let part2Section = document.getElementById('part2');
-part2Section.classList.add('hidden');
+
+// part2Section.classList.add('hidden');
 
 let xmlEl = document.getElementById("xmltext");
 xmlEl.textContent = `<req>
@@ -41,8 +41,10 @@ jsonfixBtn.addEventListener('click', function() {
     jsonfixBtn.style.display = 'none';
     })
 
+
 let part2Btn = document.getElementById('part2btn');
 let part1Section = document.getElementById('part1');
+let part2Section = document.getElementById('part2');
 console.log(part1Section);
 part2Btn.addEventListener('click', function() {
         part1Section.classList.add('hidden');
