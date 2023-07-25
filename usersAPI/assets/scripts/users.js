@@ -19,7 +19,6 @@ async function showUsers() {
         <tr>
             <td class="username">
             <b>${element.name}</b><br>
-            <i>aka</i>
             ${element.username}
             </td>
             <td class="userinfo">
