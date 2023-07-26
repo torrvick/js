@@ -14,7 +14,7 @@ async function showUsers() {
     let usersSection = document.getElementById('userscard');
     let cardsHTML = '<table>'; 
     let rowCount = 0;
-    jsonFromLS.forEach(element => {
+    jsonFromLS.slice().reverse().forEach(element => {
         let trColor = rowCount % 2 == 0 ? "#f0f0f0" : "#ffffff";
         let card = `
         <tr style="background-color:${trColor}">
