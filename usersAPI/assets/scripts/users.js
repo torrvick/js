@@ -13,10 +13,11 @@ async function showUsers() {
     let jsonFromLS = JSON.parse(localStorage.getItem('users'));
     let usersSection = document.getElementById('userscard');
     let cardsHTML = '<table>'; 
-    // console.log(jsonFromLS);
+    let rowCount = 0;
     jsonFromLS.forEach(element => {
+        let trColor = rowCount % 2 == 0 ? "#f0f0f0" : "#ffffff";
         let card = `
-        <tr>
+        <tr style="background-color:${trColor}">
             <td class="username">
             <b>${element.name}</b><br>
             ${element.username}
@@ -25,10 +26,10 @@ async function showUsers() {
             ${element.phone}<br>
             <a href="mailto:${element.email}">
             ${element.email}</a>
-            </td>
-            
+            </td>           
         </tr>`;
         cardsHTML += card ;
+        rowCount++;
     });
     cardsHTML += "</table>"
     usersSection.innerHTML = cardsHTML;
@@ -56,7 +57,7 @@ async function addUser(event) {
         email: email,
         phone: phone
     }; 
-    
+
     let response = await fetch(url, 
         {
             method: 'POST',
